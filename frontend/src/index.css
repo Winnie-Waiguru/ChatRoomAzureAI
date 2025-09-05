@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icons-style {
+  @apply w-[32px] h-[32px] text-[#2384FA];
+}
+
+.icon-bg {
+  @apply p-2 rounded-full hover:opacity-80 transition-opacity duration-200;
+}
