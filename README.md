@@ -1,48 +1,44 @@
-# Chat Application
+# ChatRoomAzureAI
 
 ## Overview
 
-This project is a real-time chat application that allows users to join chat rooms and communicate based on their assigned roles (User, Agent, Supervisor). The application leverages modern web technologies such as React, Socket.io, and Tailwind CSS to provide an engaging user experience.
+**ChatRoomAzureAI** is a real-time chat application extended from an open-source base project.  
+While the original project had chat functionality working, I **implemented my own API integration** to power AI responses.  
+This required me to obtain my own API key and wire up the backend/frontend to make the app functional.
 
-## Collaborators
+This repo reflects **my customized version**, which includes UI changes, API integration, and deployment.
 
-- [LoadSmile](https://github.com/loadsmile)
+## My Contributions
 
-## Features
+- **UI/UX Redesign** with **Tailwind CSS**.
+- **AI Integration**:
+- Obtained my own **Google AI Studio API key**.
+- Configured `.env.production` for Vite builds in the frontend.
+- Deployment:
+  - Backend → Render: [https://chatroomazureai.onrender.com](https://chatroomazureai.onrender.com)
+  - Frontend → GitHub Pages: [https://winnie-waiguru.github.io/ChatRoomAzureAI](https://winnie-waiguru.github.io/ChatRoomAzureAI)
 
-- **Role-Based Access**: Users can join as either a User, Agent, or Supervisor. Each role has specific functionalities and access.
-- **Real-Time Messaging**: Utilizes Socket.io for real-time communication between users in the same chat room.
-- **Private Messaging**: Agents and Supervisors can send private messages to each other.
-- **Multi-Language Support**: Users can select their preferred language from a dropdown menu.
-- **Responsive Design**: Built with Tailwind CSS for a clean and responsive UI.
+## Original Features (from base project)
 
-![screenshot](https://github.com/limatainer/ChatRoomAzureAI/blob/main/translate.gif)
+- Role-Based Access: `User`, `Agent`, `Supervisor`.
+- Real-Time Messaging with **Socket.io**.
+- Private Messaging between Agents & Supervisors.
+- Multi-Language Support for users.
+- Mobile-Responsive Layout.
 
-## Components
+## Screenshots
 
-1. **LoginForm**:
+### Current Version (Tailwind + Gemini AI)
 
-   - Allows users to enter their conversation code, username, language, and role.
-   - Validates input and manages state for agent and supervisor codes.
+![screenshot](./public/screenshot.png)
 
-2. **Chat**:
-
-   - Displays chat messages with timestamps and user roles.
-   - Supports sending messages and toggling private messaging options.
-   - Renders a sidebar for conversations and a knowledge base for agents and supervisors.
-
-3. **App**:
-   - Manages the overall application state including room details, user information, and message history.
-   - Handles socket connections for real-time messaging.
-
-## Installation
-
-To get started with the project:
+## Installation & Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone <https://github.com/limatainer/ChatRoomAzureAI>
+   git clone https://github.com/Winnie-Waiguru/ChatRoomAzureAI.git
+   cd ChatRoomAzureAI
    cd <frontweb>
    cd <server>
    ```
@@ -51,28 +47,21 @@ To get started with the project:
 
    ```bash
    for server npm install
-   for frontweb yarn
+   for frontweb npm install
    ```
 
-3. Set up the environment variable for the socket server URL in a `.env` file:
+3. Set up the environment variables:
 
    ```plaintext
-   VITE_SOCKET_SERVER_URL=http://localhost:3000
+   for server GEMINI_API_KEY=your_google_api_key_here
+   for frontweb VITE_API_BASE_URL=https://chatroomazureai.onrender.com
    ```
 
 4. Start the development server and frontend:
 
    ```bash
-   npm start and yarn dev
+   npm start and npm run dev
    ```
-
-5. Open your browser and navigate to `http://localhost:3000`.
-
-## Usage
-
-1. Enter a conversation code, your name, select a language, and choose your role (User, Agent, Supervisor).
-2. Click "Join Conversation" to enter the chat room.
-3. Send messages in the chat area; Agents and Supervisors can toggle private messaging.
 
 ## Technologies Used
 
@@ -80,15 +69,3 @@ To get started with the project:
 - **Socket.io**: For real-time communication.
 - **Tailwind CSS**: For styling components.
 - **JavaScript/TypeScript**: For application logic.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README further based on specific project requirements or additional features!
