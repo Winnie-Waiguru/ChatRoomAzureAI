@@ -9,8 +9,6 @@ The original project had chat functionality working, but when you fork it you mu
 In my customized version, I implemented **Google AI Studio API integration**, redesigned the **UI with Tailwind CSS**,  
 and deployed both the frontend and backend to production.
 
----
-
 ## My Contributions
 
 - **UI/UX Redesign** using **Tailwind CSS** for a modern, responsive look.
