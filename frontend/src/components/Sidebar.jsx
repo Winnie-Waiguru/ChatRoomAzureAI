@@ -61,16 +61,18 @@ const Sidebar = ({
                   isDarkMode ? "bg-gray-700" : "bg-gray-100"
                 } hover:opacity-80 transition-opacity duration-200`}
               >
-                <MdOutlineTopic className="icons-style" />
+                <MdOutlineTopic className="icons-style hover:opacity-80 transition-opacity duration-200" />
               </div>
 
-              <span>Topics</span>
+              <span className="hover:opacity-80 transition-opacity duration-200 ">
+                Topics
+              </span>
             </div>
             <button onClick={handleListVisibility}>
               {showList ? (
-                <IoIosArrowUp className="icons-style" />
+                <IoIosArrowUp className="icons-style hover:opacity-80 transition-opacity duration-200 " />
               ) : (
-                <IoIosArrowDown className="icons-style" />
+                <IoIosArrowDown className="icons-style hover:opacity-80 transition-opacity duration-200" />
               )}
             </button>
           </div>
