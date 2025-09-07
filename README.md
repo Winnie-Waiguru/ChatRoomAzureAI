@@ -2,18 +2,22 @@
 
 ## Overview
 
-**ChatRoomAzureAI** is a real-time chat application extended from an open-source base project.  
-While the original project had chat functionality working, I **implemented my own API integration** to power AI responses.  
-This required me to obtain my own API key and wire up the backend/frontend to make the app functional.
+**ChatRoomAzureAI** is a real-time chat application extended from the open-source project  
+[loadsmile](https://github.com/limatainer/ChatRoomAzureAI.git).
 
-This repo reflects **my customized version**, which includes UI changes, API integration, and deployment.
+The original project had chat functionality working, but when you fork it you must configure your own API key.  
+In my customized version, I implemented **Google AI Studio API integration**, redesigned the **UI with Tailwind CSS**,  
+and deployed both the frontend and backend to production.
+
+---
 
 ## My Contributions
 
-- **UI/UX Redesign** with **Tailwind CSS**.
+- **UI/UX Redesign** using **Tailwind CSS** for a modern, responsive look.
 - **AI Integration**:
-- Obtained my own **Google AI Studio API key**.
-- Configured `.env.production` for Vite builds in the frontend.
+  - Obtained and configured my own **Google AI Studio API key**.
+  - Wired up the backend and frontend to enable AI-powered chat responses.
+  - Configured `.env.production` for Vite builds in the frontend.
 - Deployment:
   - Backend → Render: [https://chatroomazureai.onrender.com](https://chatroomazureai.onrender.com)
   - Frontend → GitHub Pages: [https://winnie-waiguru.github.io/ChatRoomAzureAI](https://winnie-waiguru.github.io/ChatRoomAzureAI)
@@ -30,7 +34,7 @@ This repo reflects **my customized version**, which includes UI changes, API int
 
 ### Current Version (Tailwind + Gemini AI)
 
-![screenshot](./public/screenshot.png)
+![screenshot](./frontend/public/screenshot.png)
 
 ## Installation & Setup
 
